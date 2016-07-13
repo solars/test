@@ -7,6 +7,7 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
+  'ng2-bootstrap': 'node_modules/ng2-bootstrap'
 };
 
 /** User packages configuration. */
@@ -15,7 +16,6 @@ const packages: any = {
     format: 'cjs',
     defaultExtension: 'js',
     main: 'ng2-bootstrap.js'
-
   }
 };
 
@@ -55,8 +55,7 @@ System.config({
   map: {
     '@angular': 'vendor/@angular',
     'rxjs': 'vendor/rxjs',
-    'main': 'main.js',
-    'ng2-bootstrap': 'node_modules/ng2-bootstrap',
+    'main': 'main.js'
   },
   packages: cliSystemConfigPackages
 });
