@@ -1,0 +1,28 @@
+<form role="form">
+
+  <div class="form-group">
+    <label for="newUrl">Image Url</label>
+    <input class="form-control" #newURL />
+  </div>
+  <button type="button" class="btn btn-success btn-s" (click)="addUrl(newURL.value); newURL.value=''">
+    <span class="glyphicon glyphicon-new-window"></span>
+    Extract Exif 
+  </button>
+
+</form>
+
+<div class="error" *ngIf="errorMessage">{{errorMessage}}</div>
+
+<br />
+<br />
+
+<table class="table" *ngIf="exifs">
+  <tr *ngFor="#key of exifs | keys">
+    <td>
+      {{key}}
+    </td>
+    <td>
+      {{exifs[key]}}
+    </td>
+  </tr>
+</table>

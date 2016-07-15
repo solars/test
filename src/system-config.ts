@@ -7,12 +7,18 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
-  'ng2-bootstrap': 'vendor/ng2-bootstrap'
+  'ng2-bootstrap': 'vendor/ng2-bootstrap',
+  'ng2-file-upload': 'vendor/ng2-file-upload',
+  'moment': 'vendor/moment/moment.js'
 };
 
 /** User packages configuration. */
 const packages: any = {
   'ng2-bootstrap': {
+    defaultExtension: 'js'
+  },
+  'ng2-file-upload': {
+    format: 'cjs',
     defaultExtension: 'js'
   }
 };
@@ -28,8 +34,10 @@ const barrels: string[] = [
   '@angular/compiler',
   '@angular/http',
   '@angular/router',
+  '@angular/forms',
   '@angular/platform-browser',
   '@angular/platform-browser-dynamic',
+  
 
   // Thirdparty barrels.
   'rxjs',
